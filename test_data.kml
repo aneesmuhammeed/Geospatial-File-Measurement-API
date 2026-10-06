@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Test Geospatial Data</name>
+    <description>A simple file with a Point, LineString, and Polygon to test the API.</description>
+    
+    <!-- A simple Point (e.g. Googleplex) -->
+    <Placemark>
+      <name>Test Point</name>
+      <description>This is a point. It should not calculate length or area.</description>
+      <Point>
+        <coordinates>-122.084,37.422,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- A simple LineString (e.g. A small path) -->
+    <Placemark>
+      <name>Test LineString</name>
+      <description>This is a line. It should calculate length.</description>
+      <LineString>
+        <coordinates>
+          -122.084,37.422,0
+          -122.085,37.423,0
+          -122.086,37.424,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A simple Polygon (e.g. A small square area) -->
+    <Placemark>
+      <name>Test Polygon</name>
+      <description>This is a polygon. It should calculate area.</description>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -122.084,37.422,0
+              -122.084,37.424,0
+              -122.086,37.424,0
+              -122.086,37.422,0
+              -122.084,37.422,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+  </Document>
+</kml>
