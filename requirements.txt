@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+python-multipart
+geopandas
+fiona
+shapely
+pyproj
+aiofiles
